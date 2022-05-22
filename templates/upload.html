@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Retro king - Upload</title>
+
+        <meta charset="utf-8">
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+        <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+        <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/upload.css') }}">
+
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+        <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+        <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+    </head>
+
+    <body oncontextmenu='return false' class='snippet-body'>
+        <div class="container card-0 justify-content-center ">
+            <div class="card-body px-sm-4 px-0">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-md-10 col">
+                        <h3 class="font-weight-bold ml-md-0 mx-auto text-center text-sm-left">
+                            <img src="{{url_for('static', filename='images/logo.png')}}" height="100px" width="100">
+                            Upload Retro King Inventory </h3>
+                        <p class="mt-md-4 ml-md-0 ml-2 text-center text-sm-left"></p>
+                    </div>
+                </div>
+                <div class="row justify-content-center round">
+                    <div class="col-lg-10 col-md-12 ">
+                        <div class="card shadow-lg card-1">
+                            <div class="card-body inner-card">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-12 col-lg-10 col-12">
+                                        <div class="form-group files">
+                                            <form id="form" method="post" action="/upload" enctype="multipart/form-data">
+                                                <label class="my-auto">Upload Your File </label>
+                                                <input id="file" type="file" name="file" required/>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-md-12 col-lg-10 col-12">
+                                        <div class="row justify-content-end mb-5">
+                                            <div class="col-lg-4 col-auto "><button type="button" id="upload-btn" class="btn btn-primary btn-block"  style="background-color:black;border-color:red;"><small class="font-weight-bold">Upload Sheet</small></button> </div>
+                                            <div class="col-lg-4 col-auto "><button type="button" id="scrap-btn" class="btn btn-primary btn-block" style="background-color:black;border-color:red;"><small class="font-weight-bold">Scrap Sheet</small></button> </div>
+                                            <div class="col-lg-4 col-auto "><button type="button" id="download-btn" class="btn btn-primary btn-block" style="background-color:black;border-color:red;"><small class="font-weight-bold">Download CSV</small></button> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="{{url_for('static', filename='javascript/upload.js')}}"></script>
+        <script type='text/javascript' src=''></script>
+    </body>
+</html>

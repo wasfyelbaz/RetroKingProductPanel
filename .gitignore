@@ -1,0 +1,7 @@
+venv/
+.idea/
+__pycache__/
+files/invalid_products.json
+flask_session/
+.DS_STORE
+files/input.xlsx
